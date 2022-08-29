@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+  reconwithme:
+    hostname: reconwithme-shipping
+    image: public.ecr.aws/m3k6p9s6/reconwithme-releaser:latest
+    restart: always
+    environment:
+      - DOPPLER_TOKEN=${DOPPLER_TOKEN}
+    env_file:
+      - .env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./.env:/src/.env
