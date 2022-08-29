@@ -16,4 +16,4 @@ jobs:
       with:
         artifacts: "reconwithme-release-latest.zip"
         token: ${{secrets.GITHUB_TOKEN}}
-        tag: tag: ${{github.sha}}
+        tag: ${{github.sha}}
